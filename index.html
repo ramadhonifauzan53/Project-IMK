@@ -1,0 +1,1757 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameBox - Your Ultimate Game Library</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/image-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/transitions.css" />
+    <link rel="stylesheet" href="css/account.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>GameBox</h1>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="overlay"></div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="nav-icon">
+            <a href="wishlist.html" class="wishlist-link">
+              <i class="far fa-heart"></i>
+              <span class="desktop-only" id="wishlist-count">0</span>
+              <span class="mobile-only"
+                >Wishlist (<span id="mobile-wishlist-count">0</span>)</span
+              >
+            </a>
+          </li>
+          <li class="nav-icon">
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="desktop-only" id="cart-count">0</span>
+              <span class="mobile-only"
+                >Cart (<span id="mobile-cart-count">0</span>)</span
+              >
+            </a>
+          </li>
+          <li class="nav-account">
+            <div class="auth-buttons">
+              <a href="#" class="btn btn-login">Login</a>
+              <a href="#" class="btn btn-signup">Sign Up</a>
+            </div>
+            <div class="account-section">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Discover Your Next Favorite Game</h1>
+          <p>
+            Explore a vast collection of games, track your progress, and connect
+            with other gamers.
+          </p>
+          <div class="hero-buttons">
+            <a href="games.html" class="btn btn-secondary">Browse Games</a>
+            <a
+              href="#trending"
+              id="trendingNowBtn"
+              data-action="trending-now"
+              class="btn btn-secondary"
+              >Trending Now</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="featured-games" class="section">
+        <h2>Featured Games</h2>
+        <div class="game-grid">
+          <!-- Featured games will be dynamically loaded here -->
+        </div>
+      </section>
+
+      <section id="features" class="section features">
+        <h2>Why Choose GameBox?</h2>
+        <div class="features-grid">
+          <div
+            class="feature-card"
+            data-feature="collection"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+            <i class="fas fa-gamepad"></i>
+            <h3>Huge Collection</h3>
+            <p>Access thousands of games across all platforms and genres.</p>
+            <div class="feature-info-content" aria-hidden="true">
+              <h4>Extensive Game Library</h4>
+              <ul>
+                <li>
+                  <strong>Platforms:</strong> PC, PlayStation, Xbox, Nintendo
+                  Switch, Mobile
+                </li>
+                <li>
+                  <strong>Genres:</strong> Action, RPG, Strategy, Simulation,
+                  Sports, Adventure
+                </li>
+                <li>
+                  <strong>Updates:</strong> Daily additions with new releases
+                  and classics
+                </li>
+                <li>
+                  <strong>Collections:</strong> Curated playlists and themed
+                  game bundles
+                </li>
+                <li>
+                  <strong>Search:</strong> Advanced filtering by platform,
+                  genre, rating, and price
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="feature-card"
+            data-feature="progress"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+            <i class="fas fa-trophy"></i>
+            <h3>Track Progress</h3>
+            <p>Keep track of your gaming achievements and progress.</p>
+            <div class="feature-info-content" aria-hidden="true">
+              <h4>Comprehensive Progress Tracking</h4>
+              <ul>
+                <li>
+                  <strong>Achievements:</strong> Unlock and display gaming
+                  milestones
+                </li>
+                <li>
+                  <strong>Statistics:</strong> Play time, completion rates, and
+                  performance metrics
+                </li>
+                <li>
+                  <strong>Sync:</strong> Cross-platform progress synchronization
+                </li>
+                <li>
+                  <strong>Goals:</strong> Set and track personal gaming
+                  objectives
+                </li>
+                <li>
+                  <strong>History:</strong> Complete gaming history and activity
+                  timeline
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="feature-card"
+            data-feature="community"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+            <i class="fas fa-users"></i>
+            <h3>Community</h3>
+            <p>Connect with other gamers and share your experiences.</p>
+            <div class="feature-info-content" aria-hidden="true">
+              <h4>Vibrant Gaming Community</h4>
+              <ul>
+                <li>
+                  <strong>Forums:</strong> Topic-specific discussions and help
+                  threads
+                </li>
+                <li>
+                  <strong>Sharing:</strong> Screenshots, gameplay clips, and
+                  achievements
+                </li>
+                <li>
+                  <strong>Groups:</strong> Join gaming communities based on
+                  interests
+                </li>
+                <li>
+                  <strong>Events:</strong> Online tournaments and community
+                  challenges
+                </li>
+                <li>
+                  <strong>Friends:</strong> Connect with gamers worldwide and
+                  play together
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>GameBox</h3>
+          <p>Your ultimate game library and social platform for gamers.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about" data-about-trigger>About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="connect-wrapper">
+            <div class="connect-icons">
+              <a
+                href="https://x.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with X (Twitter)"
+              >
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with Facebook"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/accounts/login/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://discord.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with Discord"
+              >
+                <i class="fab fa-discord"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 GameBox. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Login to Your Account</h2>
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="form-control"
+            />
+            <div class="forgot-password">
+              <a href="#">Forgot Password?</a>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <div class="form-footer">
+            Don't have an account? <a href="#" id="showSignup">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Create Your Account</h2>
+        <form id="signupForm" class="auth-form">
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input
+              type="password"
+              id="signup-password"
+              name="password"
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirmPassword"
+              required
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+          <div class="form-footer">
+            Already have an account? <a href="#" id="showLogin">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Global function for showing popup
+      window.showCustomPopup = function (title, message, type = "success") {
+        console.log("showCustomPopup called with:", { title, message, type });
+
+        // Create popup element if it doesn't exist
+        let popup = document.getElementById("custom-popup");
+        if (!popup) {
+          popup = document.createElement("div");
+          popup.id = "custom-popup";
+          popup.className = `custom-popup ${type}`;
+          popup.innerHTML = `
+          <div class="popup-content">
+            <div class="popup-icon">
+              <i class="fas"></i>
+            </div>
+            <div class="popup-text">
+              <h3 class="popup-title"></h3>
+              <p class="popup-message"></p>
+            </div>
+            <button class="popup-confirm">OK</button>
+          </div>
+        `;
+          document.body.appendChild(popup);
+        }
+
+        // Set icon based on type
+        const popupIcon = popup.querySelector(".popup-icon i");
+        const popupTitle = popup.querySelector(".popup-title");
+        const popupMessage = popup.querySelector(".popup-message");
+        const popupConfirm = popup.querySelector(".popup-confirm");
+
+        // Set icon and colors
+        let iconClass = "";
+        let backgroundColor = "";
+
+        switch (type) {
+          case "success":
+            iconClass = "fa-check-circle";
+            backgroundColor = "#4CAF50";
+            break;
+          case "error":
+            iconClass = "fa-times-circle";
+            backgroundColor = "#f44336";
+            break;
+          case "info":
+          default:
+            iconClass = "fa-info-circle";
+            backgroundColor = "#2196F3";
+        }
+
+        popupIcon.className = `fas ${iconClass}`;
+        popup.style.borderColor = backgroundColor;
+        popupConfirm.style.backgroundColor = backgroundColor;
+
+        // Set content
+        popupTitle.textContent = title;
+        popupMessage.textContent = message;
+
+        // Show popup
+        popup.classList.add("show");
+
+        // Close popup when clicking confirm button
+        const closePopup = function () {
+          popup.classList.remove("show");
+          popupConfirm.removeEventListener("click", closePopup);
+        };
+
+        popupConfirm.addEventListener("click", closePopup);
+
+        // Close when clicking outside content
+        const closeOnOutsideClick = function (e) {
+          if (e.target === popup) {
+            closePopup();
+            window.removeEventListener("click", closeOnOutsideClick);
+          }
+        };
+
+        window.addEventListener("click", closeOnOutsideClick);
+
+        // Auto close after 5 seconds
+        setTimeout(closePopup, 5000);
+      };
+    </script>
+
+    <!-- Core Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/page-transitions.js"></script>
+
+    <script>
+      // Initialize everything when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM fully loaded and parsed");
+
+        // Initialize auth module
+        if (typeof Auth !== "undefined") {
+          console.log("Initializing Auth module...");
+          Auth.init();
+
+          // Manually trigger click events for login/signup buttons
+          const loginBtn = document.querySelector(".btn-login");
+          const signupBtn = document.querySelector(".btn-signup");
+
+          if (loginBtn) {
+            loginBtn.addEventListener("click", function (e) {
+              e.preventDefault();
+              console.log("Login button clicked");
+              const loginModal = document.getElementById("loginModal");
+              if (loginModal) {
+                loginModal.style.display = "flex";
+                document.body.style.overflow = "hidden";
+              }
+            });
+          }
+
+          if (signupBtn) {
+            signupBtn.addEventListener("click", function (e) {
+              e.preventDefault();
+              console.log("Signup button clicked");
+              const signupModal = document.getElementById("signupModal");
+              if (signupModal) {
+                signupModal.style.display = "flex";
+                document.body.style.overflow = "hidden";
+              }
+            });
+          }
+
+          // Toggle between login and signup modals
+          const showSignupLink = document.getElementById("showSignup");
+          const showLoginLink = document.getElementById("showLogin");
+          const loginModal = document.getElementById("loginModal");
+          const signupModal = document.getElementById("signupModal");
+
+          if (showSignupLink && loginModal && signupModal) {
+            showSignupLink.addEventListener("click", function (e) {
+              e.preventDefault();
+              console.log("Show signup link clicked");
+              loginModal.style.display = "none";
+              signupModal.style.display = "flex";
+            });
+          }
+
+          if (showLoginLink && loginModal && signupModal) {
+            showLoginLink.addEventListener("click", function (e) {
+              e.preventDefault();
+              console.log("Show login link clicked");
+              signupModal.style.display = "none";
+              loginModal.style.display = "flex";
+            });
+          }
+
+          // Close modals when clicking the close button
+          const closeButtons = document.querySelectorAll(".close-modal");
+          closeButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+              console.log("Close button clicked");
+              const modal = this.closest(".modal");
+              if (modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+              }
+            });
+          });
+
+          // Close modals when clicking outside
+          window.addEventListener("click", function (event) {
+            if (event.target.classList.contains("modal")) {
+              console.log("Clicked outside modal");
+              event.target.style.display = "none";
+              document.body.style.overflow = "auto";
+            }
+          });
+        } else {
+          console.error(
+            "Auth module not found. Make sure auth.js is properly loaded."
+          );
+        }
+      });
+    </script>
+
+    <!-- About Us Modal -->
+    <div id="aboutModal" class="about-modal-overlay" aria-hidden="true">
+      <div class="about-modal-container">
+        <div class="about-modal-header">
+          <h2>About This Website</h2>
+          <button class="about-modal-close" aria-label="Close about modal">
+            &times;
+          </button>
+        </div>
+        <div class="about-modal-body">
+          <div class="about-modal-content">
+            <p class="about-intro">
+              <strong>GameBox</strong> is your ultimate digital game library and
+              gaming hub, designed to provide gamers with a comprehensive
+              platform for discovering, tracking, and managing their favorite
+              games.
+            </p>
+
+            <div class="about-features">
+              <h3>Key Features</h3>
+              <ul class="about-features-list">
+                <li>
+                  <i class="fas fa-gamepad"></i> Extensive game collection
+                  across all platforms
+                </li>
+                <li>
+                  <i class="fas fa-heart"></i> Personal wishlist management
+                </li>
+                <li>
+                  <i class="fas fa-shopping-cart"></i> Easy cart and checkout
+                  system
+                </li>
+                <li>
+                  <i class="fas fa-trophy"></i> Progress tracking and
+                  achievements
+                </li>
+                <li>
+                  <i class="fas fa-users"></i> Community features and reviews
+                </li>
+                <li>
+                  <i class="fas fa-search"></i> Advanced search and filtering
+                </li>
+                <li>
+                  <i class="fas fa-mobile-alt"></i> Mobile-friendly responsive
+                  design
+                </li>
+              </ul>
+            </div>
+
+            <div class="about-tech">
+              <h3>Technology Stack</h3>
+              <p>
+                Built with modern web technologies to ensure the best gaming
+                experience:
+              </p>
+              <ul class="about-tech-list">
+                <li>HTML5 & Semantic Markup</li>
+                <li>CSS3 with Responsive Design</li>
+                <li>Vanilla JavaScript</li>
+                <li>Font Awesome Icons</li>
+              </ul>
+            </div>
+
+            <div class="about-mission">
+              <h3>Our Mission</h3>
+              <p>
+                To create a seamless, user-friendly platform that brings
+                together gamers from all backgrounds and provides them with the
+                tools they need to discover, track, and enjoy their gaming
+                journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Modal Styles -->
+    <style>
+      /* About Modal Styles */
+      .about-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      .about-modal-overlay.active {
+        display: flex;
+        opacity: 1;
+      }
+
+      .about-modal-container {
+        background: linear-gradient(135deg, #1a1a3e 0%, #2d2d5a 100%);
+        border: 1px solid rgba(0, 240, 255, 0.3);
+        border-radius: 12px;
+        max-width: 600px;
+        width: 90%;
+        max-height: 85vh;
+        overflow-y: auto;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+
+      .about-modal-overlay.active .about-modal-container {
+        transform: scale(1);
+      }
+
+      .about-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+        background: rgba(0, 240, 255, 0.05);
+      }
+
+      .about-modal-header h2 {
+        color: #00f0ff;
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .about-modal-close {
+        background: none;
+        border: none;
+        color: #b8c2ff;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        line-height: 1;
+      }
+
+      .about-modal-close:hover {
+        color: #00f0ff;
+        background: rgba(0, 240, 255, 0.1);
+        transform: rotate(90deg);
+      }
+
+      .about-modal-body {
+        padding: 2rem;
+        color: #ffffff;
+      }
+
+      .about-intro {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        color: #e2e8f0;
+      }
+
+      .about-features h3,
+      .about-tech h3,
+      .about-mission h3 {
+        color: #00f0ff;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .about-features-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+      }
+
+      .about-features-list li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: #b8c2ff;
+        font-size: 1rem;
+      }
+
+      .about-features-list li:last-child {
+        border-bottom: none;
+      }
+
+      .about-features-list i {
+        color: #00f0ff;
+        font-size: 1.2rem;
+        width: 24px;
+        text-align: center;
+      }
+
+      .about-tech-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+      }
+
+      .about-tech-list li {
+        padding: 0.5rem 0;
+        color: #b8c2ff;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .about-tech-list li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #00f0ff;
+        font-weight: bold;
+      }
+
+      .about-mission p {
+        line-height: 1.6;
+        color: #e2e8f0;
+        font-style: italic;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .about-modal-container {
+          width: 95%;
+          max-height: 90vh;
+          margin: 1rem;
+        }
+
+        .about-modal-header {
+          padding: 1rem;
+        }
+
+        .about-modal-header h2 {
+          font-size: 1.3rem;
+        }
+
+        .about-modal-close {
+          font-size: 1.5rem;
+        }
+
+        .about-modal-body {
+          padding: 1.5rem;
+        }
+
+        .about-intro {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .about-features-list li {
+          font-size: 0.9rem;
+          padding: 0.6rem 0;
+        }
+
+        .about-features h3,
+        .about-tech h3,
+        .about-mission h3 {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .about-modal-container {
+          width: 98%;
+          margin: 0.5rem;
+        }
+
+        .about-modal-header {
+          padding: 0.8rem;
+        }
+
+        .about-modal-body {
+          padding: 1rem;
+        }
+
+        .about-features-list li {
+          font-size: 0.85rem;
+          gap: 0.8rem;
+        }
+
+        .about-features-list i {
+          font-size: 1rem;
+          width: 20px;
+        }
+      }
+    </style>
+
+    <!-- Feature Card Interaction Styles -->
+    <style>
+      /* Feature Card Info Styles */
+      .feature-info-content {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #1a1a3e 0%, #2d2d5a 100%);
+        border: 1px solid rgba(0, 240, 255, 0.3);
+        border-radius: 8px;
+        padding: 1.5rem;
+        width: 320px;
+        max-width: 90vw;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
+        z-index: 100;
+        margin-top: 1rem;
+      }
+
+      .feature-info-content::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #2d2d5a;
+      }
+
+      .feature-info-content h4 {
+        color: #00f0ff;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .feature-info-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .feature-info-content li {
+        color: #b8c2ff;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        padding-left: 1rem;
+        position: relative;
+      }
+
+      .feature-info-content li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #00f0ff;
+        font-weight: bold;
+      }
+
+      .feature-info-content strong {
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      /* Active state */
+      .feature-card[data-feature].active .feature-info-content {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(5px);
+      }
+
+      /* Card positioning for dropdown */
+      .feature-card {
+        position: relative;
+      }
+
+      /* Mobile positioning */
+      @media (max-width: 768px) {
+        .feature-info-content {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 85%;
+          max-width: 400px;
+          max-height: 70vh;
+          overflow-y: auto;
+          margin-top: 0;
+        }
+
+        .feature-info-content::before {
+          display: none;
+        }
+
+        .feature-card[data-feature].active .feature-info-content {
+          transform: translate(-50%, -50%);
+        }
+
+        /* Add backdrop for mobile */
+        .feature-card[data-feature].active::after {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 99;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .feature-info-content {
+          width: 90%;
+          padding: 1rem;
+        }
+
+        .feature-info-content h4 {
+          font-size: 1rem;
+        }
+
+        .feature-info-content li {
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+
+    <!-- Connect With Us Styles -->
+    <style>
+      /* Connect With Us Section Styles */
+      .connect-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+      }
+
+      .connect-icons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .connect-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        color: #adb5bd;
+        font-size: 1.2rem;
+        transition: all 0.2s ease;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .connect-icons a:hover,
+      .connect-icons a:focus {
+        color: #00f0ff;
+        background: rgba(0, 240, 255, 0.1);
+        border-color: rgba(0, 240, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .connect-icons a:focus {
+        outline: 2px solid #00f0ff;
+        outline-offset: 2px;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .connect-wrapper {
+          margin-top: 12px;
+        }
+
+        .connect-icons {
+          gap: 16px;
+        }
+
+        .connect-icons a {
+          width: 36px;
+          height: 36px;
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .connect-wrapper {
+          margin-top: 10px;
+        }
+
+        .connect-icons {
+          gap: 14px;
+        }
+
+        .connect-icons a {
+          width: 32px;
+          height: 32px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+
+    <!-- About Modal JavaScript -->
+    <script>
+      (function () {
+        "use strict";
+
+        // About Modal Controller
+        const AboutModal = {
+          init: function () {
+            this.modal = document.getElementById("aboutModal");
+            this.aboutLinks = document.querySelectorAll("[data-about-trigger]");
+            this.closeBtn = document.querySelector(".about-modal-close");
+            this.overlay = this.modal;
+
+            if (!this.modal) {
+              console.warn("About modal not found");
+              return;
+            }
+
+            this.bindEvents();
+          },
+
+          bindEvents: function () {
+            const self = this;
+
+            // Handle About Us link clicks
+            this.aboutLinks.forEach(function (link) {
+              link.addEventListener("click", function (e) {
+                e.preventDefault();
+                self.open();
+              });
+            });
+
+            // Handle close button
+            if (this.closeBtn) {
+              this.closeBtn.addEventListener("click", function () {
+                self.close();
+              });
+            }
+
+            // Handle overlay click
+            this.overlay.addEventListener("click", function (e) {
+              if (e.target === self.overlay) {
+                self.close();
+              }
+            });
+
+            // Handle ESC key
+            document.addEventListener("keydown", function (e) {
+              if (
+                e.key === "Escape" &&
+                self.modal.classList.contains("active")
+              ) {
+                self.close();
+              }
+            });
+          },
+
+          open: function () {
+            this.modal.classList.add("active");
+            this.modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+
+            // Focus management
+            setTimeout(() => {
+              this.closeBtn.focus();
+            }, 100);
+          },
+
+          close: function () {
+            this.modal.classList.remove("active");
+            this.modal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "auto";
+          },
+        };
+
+        // Initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", function () {
+            AboutModal.init();
+          });
+        } else {
+          AboutModal.init();
+        }
+      })();
+    </script>
+
+    <!-- Feature Card Interaction JavaScript -->
+    <script>
+      (function () {
+        "use strict";
+
+        // Feature Card Interaction Controller
+        const FeatureCardInteraction = {
+          init: function () {
+            this.featureCards = document.querySelectorAll(
+              ".feature-card[data-feature]"
+            );
+            this.activeCard = null;
+
+            if (!this.featureCards.length) {
+              console.warn("No feature cards found");
+              return;
+            }
+
+            this.bindEvents();
+          },
+
+          bindEvents: function () {
+            const self = this;
+
+            // Click events for desktop
+            this.featureCards.forEach(function (card) {
+              card.addEventListener("click", function (e) {
+                e.preventDefault();
+                self.toggleCard(card);
+              });
+
+              // Touch events for mobile
+              card.addEventListener("touchstart", function (e) {
+                e.preventDefault();
+                self.toggleCard(card);
+              });
+
+              // Keyboard accessibility
+              card.addEventListener("keydown", function (e) {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  self.toggleCard(card);
+                }
+              });
+            });
+
+            // Click outside to close
+            document.addEventListener("click", function (e) {
+              if (self.activeCard && !self.activeCard.contains(e.target)) {
+                self.closeCard(self.activeCard);
+              }
+            });
+
+            // Touch outside to close (mobile)
+            document.addEventListener("touchstart", function (e) {
+              if (self.activeCard && !self.activeCard.contains(e.target)) {
+                self.closeCard(self.activeCard);
+              }
+            });
+
+            // ESC key to close
+            document.addEventListener("keydown", function (e) {
+              if (e.key === "Escape" && self.activeCard) {
+                self.closeCard(self.activeCard);
+              }
+            });
+          },
+
+          toggleCard: function (card) {
+            if (card.classList.contains("active")) {
+              this.closeCard(card);
+            } else {
+              this.openCard(card);
+            }
+          },
+
+          openCard: function (card) {
+            // Close any active card first
+            if (this.activeCard && this.activeCard !== card) {
+              this.closeCard(this.activeCard);
+            }
+
+            card.classList.add("active");
+            card.setAttribute("aria-expanded", "true");
+
+            // Update content visibility
+            const content = card.querySelector(".feature-info-content");
+            if (content) {
+              content.setAttribute("aria-hidden", "false");
+            }
+
+            this.activeCard = card;
+
+            // Prevent body scroll on mobile
+            if (window.innerWidth <= 768) {
+              document.body.style.overflow = "hidden";
+            }
+          },
+
+          closeCard: function (card) {
+            card.classList.remove("active");
+            card.setAttribute("aria-expanded", "false");
+
+            // Update content visibility
+            const content = card.querySelector(".feature-info-content");
+            if (content) {
+              content.setAttribute("aria-hidden", "true");
+            }
+
+            if (this.activeCard === card) {
+              this.activeCard = null;
+
+              // Restore body scroll on mobile
+              if (window.innerWidth <= 768) {
+                document.body.style.overflow = "auto";
+              }
+            }
+          },
+        };
+
+        // Initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", function () {
+            FeatureCardInteraction.init();
+          });
+        } else {
+          FeatureCardInteraction.init();
+        }
+      })();
+    </script>
+
+    <!-- Trending Now Modal -->
+    <div id="trendingModal" class="trending-modal-overlay" aria-hidden="true">
+      <div class="trending-modal-container">
+        <div class="trending-modal-header">
+          <h2>Trending Now 🔥</h2>
+          <button
+            class="trending-modal-close"
+            aria-label="Close trending modal"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="trending-modal-body">
+          <div class="trending-games-list">
+            <!-- Trending games will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trending Now Styles -->
+    <style>
+      /* Trending Modal Styles */
+      .trending-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 3000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .trending-modal-overlay.active {
+        display: flex;
+        opacity: 1;
+      }
+
+      .trending-modal-container {
+        background: linear-gradient(135deg, #1a1a3e 0%, #2d2d5a 100%);
+        border: 1px solid rgba(0, 240, 255, 0.3);
+        border-radius: 16px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 85vh;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+
+      .trending-modal-overlay.active .trending-modal-container {
+        transform: scale(1);
+      }
+
+      .trending-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+        background: rgba(0, 240, 255, 0.05);
+      }
+
+      .trending-modal-header h2 {
+        color: #00f0ff;
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .trending-modal-close {
+        background: none;
+        border: none;
+        color: #b8c2ff;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        line-height: 1;
+      }
+
+      .trending-modal-close:hover {
+        color: #00f0ff;
+        background: rgba(0, 240, 255, 0.1);
+        transform: rotate(90deg);
+      }
+
+      .trending-modal-body {
+        padding: 2rem;
+        overflow-y: auto;
+        max-height: calc(85vh - 100px);
+      }
+
+      .trending-games-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .trending-game-item {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1rem;
+        transition: all 0.2s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .trending-game-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(0, 240, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .trending-game-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #ff6b6b, #ffd93d);
+        border-radius: 2px 0 0 2px;
+      }
+
+      .trending-game-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .trending-game-cover {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        object-fit: cover;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        overflow: hidden;
+      }
+
+      .trending-game-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      /* Card clickability */
+      .trending-game-item {
+        cursor: pointer;
+      }
+
+      .trending-game-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(0, 240, 255, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 240, 255, 0.15);
+      }
+
+      .trending-game-item:focus {
+        outline: 2px solid #00f0ff;
+        outline-offset: 2px;
+      }
+
+      .trending-game-info {
+        flex: 1;
+      }
+
+      .trending-game-title {
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        line-height: 1.3;
+      }
+
+      .trending-game-genre {
+        color: #b8c2ff;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .trending-game-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 107, 107, 0.2);
+        color: #ff6b6b;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .trending-game-status::before {
+        content: "🔥";
+        font-size: 0.9rem;
+      }
+
+      .trending-game-rank {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: linear-gradient(135deg, #00f0ff, #0080ff);
+        color: white;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .trending-modal-container {
+          width: 95%;
+          max-height: 90vh;
+        }
+
+        .trending-modal-header {
+          padding: 1rem 1.5rem;
+        }
+
+        .trending-modal-header h2 {
+          font-size: 1.3rem;
+        }
+
+        .trending-modal-close {
+          font-size: 1.5rem;
+        }
+
+        .trending-modal-body {
+          padding: 1.5rem;
+          max-height: calc(90vh - 80px);
+        }
+
+        .trending-games-list {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .trending-game-header {
+          gap: 0.8rem;
+        }
+
+        .trending-game-cover {
+          width: 50px;
+          height: 50px;
+          font-size: 1.2rem;
+        }
+
+        .trending-game-title {
+          font-size: 1rem;
+        }
+
+        .trending-game-genre {
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .trending-modal-container {
+          width: 98%;
+          margin: 0.5rem;
+        }
+
+        .trending-modal-header {
+          padding: 0.8rem 1rem;
+        }
+
+        .trending-modal-body {
+          padding: 1rem;
+        }
+
+        .trending-game-item {
+          padding: 0.8rem;
+        }
+
+        .trending-game-cover {
+          width: 45px;
+          height: 45px;
+          font-size: 1rem;
+        }
+
+        .trending-game-title {
+          font-size: 0.95rem;
+        }
+
+        .trending-game-genre {
+          font-size: 0.8rem;
+        }
+
+        .trending-game-status {
+          font-size: 0.75rem;
+          padding: 0.2rem 0.6rem;
+        }
+      }
+    </style>
+
+    <!-- Trending Now JavaScript -->
+    <script>
+      (function () {
+        "use strict";
+
+        // Trending Now Controller
+        const TrendingNow = {
+          init: function () {
+            this.modal = document.getElementById("trendingModal");
+            this.triggerBtn = document.getElementById("trendingNowBtn");
+            this.closeBtn = document.querySelector(".trending-modal-close");
+            this.gamesList = document.querySelector(".trending-games-list");
+
+            if (!this.modal || !this.triggerBtn || !this.gamesList) {
+              console.warn("Trending modal elements not found");
+              return;
+            }
+
+            this.trendingGames = [
+              {
+                id: 1,
+                title: "The Witcher 3: Wild Hunt",
+                genre: "RPG",
+                image:
+                  "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg",
+                slug: "the-witcher-3-wild-hunt",
+                rank: 1,
+              },
+              {
+                id: 2,
+                title: "Red Dead Redemption 2",
+                genre: "Adventure",
+                image:
+                  "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg",
+                slug: "red-dead-redemption-2",
+                rank: 2,
+              },
+              {
+                id: 3,
+                title: "Elden Ring",
+                genre: "Action RPG",
+                image:
+                  "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg",
+                slug: "elden-ring",
+                rank: 3,
+              },
+              {
+                id: 4,
+                title: "Cyberpunk 2077",
+                genre: "Action RPG",
+                image:
+                  "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
+                slug: "cyberpunk-2077",
+                rank: 4,
+              },
+              {
+                id: 5,
+                title: "Baldur's Gate 3",
+                genre: "RPG",
+                image:
+                  "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
+                slug: "baldurs-gate-3",
+                rank: 5,
+              },
+              {
+                id: 6,
+                title: "God of War",
+                genre: "Action",
+                image:
+                  "https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg",
+                slug: "god-of-war",
+                rank: 6,
+              },
+            ];
+
+            this.bindEvents();
+          },
+
+          bindEvents: function () {
+            const self = this;
+
+            // Trigger button click
+            this.triggerBtn.addEventListener("click", function (e) {
+              e.preventDefault();
+              self.open();
+            });
+
+            // Close button
+            this.closeBtn.addEventListener("click", function () {
+              self.close();
+            });
+
+            // Click outside to close
+            this.modal.addEventListener("click", function (e) {
+              if (e.target === self.modal) {
+                self.close();
+              }
+            });
+
+            // ESC key to close
+            document.addEventListener("keydown", function (e) {
+              if (
+                e.key === "Escape" &&
+                self.modal.classList.contains("active")
+              ) {
+                self.close();
+              }
+            });
+          },
+
+          open: function () {
+            this.renderGames();
+            this.modal.classList.add("active");
+            this.modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+
+            // Focus management
+            setTimeout(() => {
+              this.closeBtn.focus();
+            }, 100);
+          },
+
+          close: function () {
+            this.modal.classList.remove("active");
+            this.modal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "auto";
+          },
+
+          renderGames: function () {
+            const self = this;
+            this.gamesList.innerHTML = "";
+
+            this.trendingGames.forEach(function (game) {
+              const gameItem = document.createElement("div");
+              gameItem.className = "trending-game-item";
+              gameItem.setAttribute("data-game-id", game.id);
+              gameItem.setAttribute("tabindex", "0");
+              gameItem.setAttribute("role", "button");
+              gameItem.setAttribute(
+                "aria-label",
+                `View ${game.title} game details`
+              );
+
+              gameItem.innerHTML = `
+                <div class="trending-game-header">
+                  <div class="trending-game-cover">
+                    <img src="${game.image}" alt="${game.title}" loading="lazy">
+                  </div>
+                  <div class="trending-game-info">
+                    <div class="trending-game-title">${game.title}</div>
+                    <div class="trending-game-genre">${game.genre}</div>
+                    <div class="trending-game-status">Trending #${game.rank}</div>
+                  </div>
+                </div>
+                <div class="trending-game-rank">${game.rank}</div>
+              `;
+
+              // Add click event for navigation
+              gameItem.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                self.navigateToGame(game);
+              });
+
+              // Add keyboard event for accessibility
+              gameItem.addEventListener("keydown", function (e) {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  self.navigateToGame(game);
+                }
+              });
+
+              self.gamesList.appendChild(gameItem);
+            });
+          },
+
+          navigateToGame: function (game) {
+            // Close modal first
+            this.close();
+
+            // Navigate to games page with hash
+            setTimeout(() => {
+              window.location.href = `games.html#${game.slug}`;
+            }, 300);
+          },
+        };
+
+        // Initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", function () {
+            TrendingNow.init();
+          });
+        } else {
+          TrendingNow.init();
+        }
+      })();
+    </script>
+  </body>
+</html>
